@@ -1,0 +1,81 @@
+ <HTML>
+<head>
+</head>
+<body>
+  <script type="text/javascript">
+  function CheckNumber(){
+    var pnumber = document.getElementById('pnumber').value;
+
+ if(pnumber.length < 11){
+      document.getElementById("showtxt").innerHTML = "less then 11 DIGIT";
+    }
+    else if(pnumber.length>11){
+      document.getElementById("showtxt").innerHTML = "more then 11 DIGIT";
+    }
+    else if(isNaN(pnumber)){
+      document.getElementById("showtxt").innerHTML = "it is not a number";
+    }
+    else if(pnumber.substr(0,1) !="1"){
+      document.getElementById("showtxt").innerHTML = "it is not beginning with 1";
+    }
+    else{
+      document.getElementById("showtxt").innerHTML = "Fine";
+    }
+}
+    function CheckYear(){
+      var disyear = parseInt(document.getElementById("pyear").value);
+      disyear = disyear % 12;
+      switch (disyear) {
+        case 0:
+            document.getElementById("showZodiac").innerHTML = "猴";
+            break;
+        case 1:
+            document.getElementById("showZodiac").innerHTML = "鸡";
+            break;
+        case 2:
+            document.getElementById("showZodiac").innerHTML = "狗";
+            break;
+        case 3:
+            document.getElementById("showZodiac").innerHTML = "猪";
+            break;
+        case 4:
+            document.getElementById("showZodiac").innerHTML = "鼠";
+            break;
+        case 5:
+            document.getElementById("showZodiac").innerHTML = "牛";
+            break;
+        case 6:
+            document.getElementById("showZodiac").innerHTML = "虎";
+            break;
+        case 7:
+            document.getElementById("showZodiac").innerHTML = "兔";
+            break;
+        case 8:
+            document.getElementById("showZodiac").innerHTML = "龙";
+            break;
+        case 9:
+            document.getElementById("showZodiac").innerHTML = "蛇";
+            break;
+        case 10:
+            document.getElementById("showZodiac").innerHTML = "马";
+            break;
+        case 11:
+            document.getElementById("showZodiac").innerHTML = "羊";
+            break;
+            default:
+
+      }
+    }
+    </script>
+  <from id = "from1">
+    Input your PhoneNumber:<br><input type="text" id="pnumber">
+    <Input type="button" value="CHECK" onclick="CheckNumber()">
+    <div id="showtxt"></div>
+    <br>
+    input your BrithYear:<br><input type="text" id="pyear">
+    <input type="button" value="CHECK" onclick="CheckYear()">
+    <div id="showZodiac"></div>
+  </form>
+
+</body>
+</html>
