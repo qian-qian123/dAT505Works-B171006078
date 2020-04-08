@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+#box1{
+  width:300px;
+  height: 300px;
+  background: url("egg.jpg") no-repeat;
+}
+#box2{
+  width:300px;
+  height: 300px;
+  background: url("flower.jpg") no-repeat;
+}
+#box3{
+  width:300px;
+  height: 300px;
+  background: url("red.jpg") no-repeat;
+}
